@@ -16,7 +16,7 @@ import { setLogin } from "state";
 import Dropzone from "react-dropzone";
 import FlexBetween from "components/FlexBetween";
 
-//regschema holds the validation schema created using yup.shape - to define shape of object
+//reg schema holds the validation schema created using yup.shape - to define shape of object
 const registerSchema = yup.object().shape({
   //define fields of the form
   firstName: yup.string().required("required"),
