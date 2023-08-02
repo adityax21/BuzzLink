@@ -25,7 +25,7 @@ const LoginPage = () => {
         backgroundColor={theme.palette.background.alt}
       >
         <Typography fontWeight="500" variant="h5" sx={{ mb: "1.5rem" }}>
-          Welcome to Buzzlink, hop on to ride on the buzz
+          Welcome to Buzzlink, hop on to ride the BUZZ
         </Typography>
         <Form />
       </Box>

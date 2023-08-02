@@ -10,11 +10,13 @@ const initialState = {
 export const authSlice = createSlice({
   name: "auth",
   initialState,
+  //reducers to manage action on present state
   reducers: {
     setMode: (state) => {
       state.mode = state.mode === "light" ? "dark" : "light";
     },
     setLogin: (state, action) => {
+      //payload has user and token  
       state.user = action.payload.user;
       state.token = action.payload.token;
     },

@@ -56,7 +56,7 @@ const Navbar = () => {
             },
           }}
         >
-          Sociopedia
+          BuzzLink
         </Typography>
         {isNonMobileScreens && (
           <FlexBetween

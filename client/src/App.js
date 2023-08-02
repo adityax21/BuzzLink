@@ -9,16 +9,17 @@ import { createTheme } from "@mui/material/styles";
 import { themeSettings } from "./theme";
 
 function App() {
-  const mode = useSelector((state) => state.mode); //get mode
+  const mode = useSelector((state) => state.mode); //get mode - light/dark
+  //use memo ensures that create theme is only called when mode changes
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]); //create theme, change when mode changes
   const isAuth = Boolean(useSelector((state) => state.token)); //auth true or not
 
   return (
     <div className="app">
       <BrowserRouter> {/*for routing ability - navigation*/}
-        <ThemeProvider theme={theme}> {/*styling info */}
-          <CssBaseline />  {/*basic CSS */}
-          <Routes> {/*define the routes*/}
+        <ThemeProvider theme={theme}> {/*styling info by material UI*/}
+          <CssBaseline />
+          <Routes> 
             <Route path="/" element={<LoginPage />} />
             {/*Root URL is the login page*/}
             <Route
