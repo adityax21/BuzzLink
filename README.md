@@ -1,3 +1,2 @@
 # BuzzLink
-This contains the social media app built as a portfolio project
-Site URL : https://buzz-link.vercel.app/
+This is a Full Stack Social Media app built using the MERN Stack.
