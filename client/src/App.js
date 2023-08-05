@@ -7,6 +7,9 @@ import { useSelector } from "react-redux";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import { themeSettings } from "./theme";
+import {inject} from "@vercel/analytics";
+
+inject();
 
 function App() {
   const mode = useSelector((state) => state.mode); //get mode - light/dark
