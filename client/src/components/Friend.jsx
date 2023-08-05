@@ -23,7 +23,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
 
   const patchFriend = async () => {
     const response = await fetch(
-      `https://buzzlink-backend.onrender.com/users/${_id}/${friendId}`,
+      `https://buzz-link-mc56-5fkk23piv-adityax21.vercel.app/users/${_id}/${friendId}`,
       {
         method: "PATCH",
         headers: {

@@ -15,7 +15,7 @@ const ProfilePage = () => {
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
 
   const getUser = async () => {
-    const response = await fetch(`https://buzzlink-backend.onrender.com/users/${userId}`, {
+    const response = await fetch(`https://buzz-link-mc56-5fkk23piv-adityax21.vercel.app/users/${userId}`, {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });

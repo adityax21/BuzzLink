@@ -8,7 +8,7 @@ const UserImage = ({ image, size = "60px" }) => {
         width={size}
         height={size}
         alt="user"
-        src={`https://buzzlink-backend.onrender.com/assets/${image}`}
+        src={`https://buzz-link-mc56-5fkk23piv-adityax21.vercel.app/assets/${image}`}
       />
     </Box>
   );

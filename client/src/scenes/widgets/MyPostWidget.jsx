@@ -46,7 +46,7 @@ const MyPostWidget = ({ picturePath }) => {
       formData.append("picturePath", image.name);
     }
 
-    const response = await fetch(`https://buzzlink-backend.onrender.com/posts`, {
+    const response = await fetch(`https://buzz-link-mc56-5fkk23piv-adityax21.vercel.app/posts`, {
       method: "POST",
       headers: { Authorization: `Bearer ${token}` },
       body: formData,
