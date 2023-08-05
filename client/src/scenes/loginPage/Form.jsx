@@ -67,7 +67,7 @@ const Form = () => {
 
     //to register the user - POST request to PORT 3001
     const savedUserResponse = await fetch(
-      "https://buzzlink-backend-cwyx7exwu-adityax21.vercel.app/auth/register",
+      "https://buzzlink-backend.onrender.com/auth/register",
       {
         method: "POST",
         body: formData,
@@ -84,7 +84,7 @@ const Form = () => {
   };
 
   const login = async (values, onSubmitProps) => {
-    const loggedInResponse = await fetch("https://buzzlink-backend-cwyx7exwu-adityax21.vercel.app/auth/login", {
+    const loggedInResponse = await fetch("https://buzzlink-backend.onrender.com/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),

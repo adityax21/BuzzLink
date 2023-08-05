@@ -9,7 +9,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
   const token = useSelector((state) => state.token);
 
   const getPosts = async () => {
-    const response = await fetch("https://buzzlink-backend-cwyx7exwu-adityax21.vercel.app/posts", {
+    const response = await fetch("https://buzzlink-backend.onrender.com/posts", {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -19,7 +19,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
 
   const getUserPosts = async () => {
     const response = await fetch(
-      `https://buzzlink-backend-cwyx7exwu-adityax21.vercel.app/posts/${userId}/posts`,
+      `https://buzzlink-backend.onrender.com/posts/${userId}/posts`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },

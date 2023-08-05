@@ -20,7 +20,7 @@ const AdvertWidget = () => {
         width="100%"
         height="auto"
         alt="advert"
-        src="https://buzzlink-backend-cwyx7exwu-adityax21.vercel.app/assets/info4.jpeg"
+        src="https://buzzlink-backend.onrender.com/assets/info4.jpeg"
         style={{ borderRadius: "0.75rem", margin: "0.75rem 0" }}
       />
       <FlexBetween>

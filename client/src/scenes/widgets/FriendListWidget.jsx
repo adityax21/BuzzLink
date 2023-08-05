@@ -13,7 +13,7 @@ const FriendListWidget = ({ userId }) => {
 
   const getFriends = async () => {
     const response = await fetch(
-      `https://buzzlink-backend-cwyx7exwu-adityax21.vercel.app/users/${userId}/friends`,
+      `https://buzzlink-backend.onrender.com/users/${userId}/friends`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
