@@ -8,9 +8,10 @@ const LoginPage = () => {
     <Box
       sx = {{
         backgroundImage:'url("../../assets/backgroundimg.jpg")',
-        backgroundPosition: 'center',
-        height: '100vh',
+        backgroundSize: 'cover',
         alignItems: 'center',
+        display: 'flex',
+        flexDirection: 'column', // Center its children vertically
       }}
     >
       <Box

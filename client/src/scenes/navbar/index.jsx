@@ -42,22 +42,35 @@ const Navbar = () => {
   const fullName = `${user.firstName} ${user.lastName}`;
 
   return (
-    <FlexBetween padding="1rem 6%" backgroundColor={alt}>
-      <FlexBetween gap="1.75rem">
-        <Typography
-          fontWeight="bold"
-          fontSize="clamp(1rem, 2rem, 2.25rem)"
-          color="primary"
-          onClick={() => navigate("/home")}
-          sx={{
-            "&:hover": {
-              color: primaryLight,
-              cursor: "pointer",
-            },
+    <FlexBetween padding="0.5rem 2%" backgroundColor={alt} width={"100%"} height={"50px"}
+    sx = {{
+      backgroundImage:'url("../../assets/Homepagebg.jpg")',
+      backgroundSize: 'cover',
+      alignItems: 'center',
+      display: 'flex',
+      }}
+    >
+      <FlexBetween gap="1.20rem">
+        <Box
+          sx = {{
+            width: "80px",
+            height: "80px",
           }}
         >
-          BuzzLink
-        </Typography>
+        <Box
+          component = "img"
+          alt="logo"
+          src="../assets/BZ.jpg"
+          sx={{
+            "&: hover" : { cursor:"pointer" },
+            width: "auto",
+            height: "50%", 
+            border : "ridge",
+            margin : "19px",
+          }}
+          onClick={()=>window.location.reload()}
+        />
+        </Box>
         {isNonMobileScreens && (
           <FlexBetween
             backgroundColor={neutralLight}
@@ -65,7 +78,7 @@ const Navbar = () => {
             gap="3rem"
             padding="0.1rem 1.5rem"
           >
-            <InputBase placeholder="Search..." />
+            <InputBase placeholder="Stalk Here..." />
             <IconButton>
               <Search />
             </IconButton>
@@ -83,9 +96,19 @@ const Navbar = () => {
               <LightMode sx={{ color: dark, fontSize: "25px" }} />
             )}
           </IconButton>
-          <Message sx={{ fontSize: "25px" }} />
-          <Notifications sx={{ fontSize: "25px" }} />
-          <Help sx={{ fontSize: "25px" }} />
+          <Message
+            sx={{ 
+            fontSize: "25px",
+            "&:hover" : {cursor : "pointer"} }} />
+          <Notifications 
+          sx={{ 
+            fontSize: "25px",
+            "&:hover" : {cursor : "pointer"}}} />
+          <Help 
+          sx={{ 
+            fontSize: "25px",
+            "&:hover" : {cursor : "pointer"}
+          }} />
           <FormControl variant="standard" value={fullName}>
             <Select
               value={fullName}
@@ -158,8 +181,12 @@ const Navbar = () => {
                 <LightMode sx={{ color: dark, fontSize: "25px" }} />
               )}
             </IconButton>
-            <Message sx={{ fontSize: "25px" }} />
-            <Notifications sx={{ fontSize: "25px" }} />
+            <Message sx={{ 
+              fontSize: "25px",
+              }} />
+            <Notifications sx={{
+               fontSize: "25px",
+              }} />
             <Help sx={{ fontSize: "25px" }} />
             <FormControl variant="standard" value={fullName}>
               <Select

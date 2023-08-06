@@ -108,7 +108,7 @@ const Form = () => {
   };
 
   return (
-    <Formik
+    <Formik 
       onSubmit={handleFormSubmit}
       initialValues={isLogin ? initialValuesLogin : initialValuesRegister}
       validationSchema={isLogin ? loginSchema : registerSchema}
@@ -245,9 +245,9 @@ const Form = () => {
               sx={{
                 m: "2rem 0",
                 p: "1rem",
-                backgroundColor: palette.primary.main,
+                backgroundColor: palette.primary.dark,
                 color: palette.background.alt,
-                "&:hover": { color: palette.primary.main },
+                "&:hover": { color: palette.primary.dark },
               }}
             >
               {isLogin ? "LOGIN" : "REGISTER"}
@@ -262,13 +262,13 @@ const Form = () => {
                 color: palette.primary.main,
                 "&:hover": {
                   cursor: "pointer",
-                  color: palette.primary.light,
+                  color: palette.primary.dark,
                 },
               }}
             >
               {isLogin
                 ? "Don't have an account? Sign Up here."
-                : "Already have an account? Login here."}
+                : "Already a user? Login here."}
             </Typography>
           </Box>
         </form>
